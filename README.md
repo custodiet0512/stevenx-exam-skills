@@ -1,6 +1,6 @@
 # stevenx-exam-skills
 
-一个面向人文社科考试的 Codex Skill。它不会先套用固定模板，而是从用户资料与考试约束出发，通过“证据建模 → 最小诊断 → 训练决策 → 作答批改 → 状态更新”循环，持续选择当前最值得练习的任务。
+一个面向人文社科考试的 Skill。它不会先套用固定模板，而是从用户资料与考试约束出发，通过“证据建模 → 最小诊断 → 训练决策 → 作答批改 → 状态更新”循环，持续选择当前最值得练习的任务。
 
 支持通用人文社科、法学和新闻传播学，可用于考点地图、冲刺计划、主动回忆、模拟训练、论述或案例题改写以及答案批改。
 
@@ -14,7 +14,7 @@
 
 ## 安装
 
-将技能目录复制到 Codex skills 目录：
+将技能目录复制到 skills 目录：
 
 ```bash
 git clone https://github.com/custodiet0512/stevenx-exam-skills.git
@@ -22,7 +22,7 @@ mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
 cp -R stevenx-exam-skills/skill/stevenx-exam-skills "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
-重新启动或刷新 Codex 后，通过 `$stevenx-exam-skills` 调用。
+重新启动或刷新 Agent 后，通过 `$stevenx-exam-skills` 调用。
 
 ## 使用示例
 
