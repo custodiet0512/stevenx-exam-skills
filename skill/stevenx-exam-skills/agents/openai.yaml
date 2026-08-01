@@ -1,4 +1,4 @@
 interface:
-  display_name: "StevenX 人文社科考试教练"
-  short_description: "基于资料诊断、训练和证据化批改的人文社科考试教练"
-  default_prompt: "Use $stevenx-exam-skills to diagnose my exam readiness from the materials I provide and choose the highest-value next drill."
+  display_name: "StevenX 人文社科提分教练"
+  short_description: "用考点取舍、闭卷训练和即时批改提升人文社科考试得分"
+  default_prompt: "Use $stevenx-exam-skills to prioritize my highest-value exam topics and start a concise score-focused drill."
