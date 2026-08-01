@@ -12,17 +12,38 @@
 - 证据化批改：没有正式评分细则时只给区间或等级判断，并标注置信度。
 - 按需加载：根据任务读取法学、新传、通用文科或练习格式参考，减少无关上下文。
 
-## 安装
+## 下载与安装
 
-将技能目录复制到 skills 目录：
+### Git Clone
 
 ```bash
 git clone https://github.com/custodiet0512/stevenx-exam-skills.git
+```
+
+### ZIP 下载
+
+[下载最新 main 分支 ZIP](https://github.com/custodiet0512/stevenx-exam-skills/archive/refs/heads/main.zip)
+
+### 安装到 Agent
+
+可安装技能位于：
+
+```text
+skill/stevenx-exam-skills/
+```
+
+将这个完整目录复制到你的 Agent 所使用的 skills 目录，不要只复制 `SKILL.md`。不同 Agent 的技能目录和刷新方式可能不同，请以对应产品文档为准。
+
+Codex 示例：
+
+```bash
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
 cp -R stevenx-exam-skills/skill/stevenx-exam-skills "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
-重新启动或刷新 Agent 后，通过 `$stevenx-exam-skills` 调用。
+对于其他支持 `SKILL.md` 目录式技能的 Agent，同样复制 `skill/stevenx-exam-skills/`，然后按该 Agent 的方式重新加载技能。`agents/openai.yaml` 是可选的界面元数据；不识别该文件的 Agent 可以忽略它，核心行为由 `SKILL.md` 和 `references/` 提供。
+
+安装完成后，以对应 Agent 支持的技能调用方式使用 `stevenx-exam-skills`；支持 `$skill-name` 语法的平台可调用 `$stevenx-exam-skills`。
 
 ## 使用示例
 
