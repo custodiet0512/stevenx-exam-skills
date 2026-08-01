@@ -34,14 +34,7 @@ skill/stevenx-exam-skills/
 
 将这个完整目录复制到你的 Agent 所使用的 skills 目录，不要只复制 `SKILL.md`。不同 Agent 的技能目录和刷新方式可能不同，请以对应产品文档为准。
 
-Codex 示例：
-
-```bash
-mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-cp -R stevenx-exam-skills/skill/stevenx-exam-skills "${CODEX_HOME:-$HOME/.codex}/skills/"
-```
-
-对于其他支持 `SKILL.md` 目录式技能的 Agent，同样复制 `skill/stevenx-exam-skills/`，然后按该 Agent 的方式重新加载技能。`agents/openai.yaml` 是可选的界面元数据；不识别该文件的 Agent 可以忽略它，核心行为由 `SKILL.md` 和 `references/` 提供。
+对于支持 `SKILL.md` 目录式技能的 Agent，复制 `skill/stevenx-exam-skills/` 后，按该 Agent 的方式重新加载技能。`agents/openai.yaml` 是可选的界面元数据；不识别该文件的 Agent 可以忽略它，核心行为由 `SKILL.md` 和 `references/` 提供。
 
 安装完成后，以对应 Agent 支持的技能调用方式使用 `stevenx-exam-skills`；支持 `$skill-name` 语法的平台可调用 `$stevenx-exam-skills`。
 
